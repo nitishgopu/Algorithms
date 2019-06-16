@@ -48,7 +48,7 @@ class LinkedList:
 
 
 
-
+# Swap Two nodes in Lined List
 def swapValues(head):
 
 
@@ -80,7 +80,6 @@ def swapValues(head):
 
     return b
 
-
 def printList(head):
     if not head:
         print None
@@ -109,14 +108,4 @@ x = swapValues(l.head)
 
 
 printList(x)
-
-
-
-
-
-
-
-
-
-
 
