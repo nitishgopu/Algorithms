@@ -5,7 +5,7 @@ def reverseListIterative(head):
 
     prev = None
     cur = head
-    print cur
+    #print cur
     while cur:
 
         next = cur.next
