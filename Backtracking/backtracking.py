@@ -1,16 +1,11 @@
 
-
-
-
-
-def subset(nums,target):
-
-    #nums.sort()
-
+#Get all subsets
+def subset(nums):
+    
     tmp = []
     list = []
-    ans = backtrack(list,tmp,nums,0)
-    print ans
+    soln = backtrack(list,tmp,nums,0)
+    return soln
 
 def backtrack(list,tmp,nums,k):
 
@@ -24,23 +19,21 @@ def backtrack(list,tmp,nums,k):
     return list
 
 
+# Combination sum without using the same number.
 def combinationsum(nums,target):
 
-    #nums.sort()
-
+    nums.sort()
     tmp = []
     list = []
-    ans = backtrackComb(list,tmp,nums,0,target)
-    print ans
+    soln = backtrackComb(list,tmp,nums,0,target)
+    return soln
 
 def backtrackComb(list,tmp,nums,k,target):
-    #print k,tmp
 
     if (target < 0): return;
 
     if target == 0:
         list.append([n for n in tmp])
-
 
     for k in range(k,len(nums)):
         tmp.append(nums[k])
@@ -52,8 +45,7 @@ def backtrackComb(list,tmp,nums,k,target):
 
 
 inp = [1,2,3,5,4]
-
 target = 5
-combinationsum(inp,target)
-#subset(inp,target)
+#combinationsum(inp,target)
+#subset(inp)
 
